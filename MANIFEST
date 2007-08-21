@@ -13,8 +13,8 @@ lib/WebService/Recruit/HotPepper/ShopSearch.pm
 lib/WebService/Recruit/HotPepper/SmallArea.pm
 make-dist.sh
 Makefile.PL
-MANIFEST
 META.yml
+MANIFEST
 t/00_pod.t
 t/01_new.t
 t/02_new_api.t

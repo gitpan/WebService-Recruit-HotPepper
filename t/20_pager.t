@@ -10,7 +10,7 @@
     eval { require Data::Page; } unless defined $Data::Page::VERSION;
     plan skip_all => 'Data::Page is not loaded.' unless defined $Data::Page::VERSION;
 
-    plan tests => 57;
+    plan tests => 53;
     use_ok('WebService::Recruit::HotPepper');
     &test_main( $key,  1,  10, 1);
     &test_main( $key,  11, 10, 2);
@@ -66,7 +66,6 @@ sub test_main {
         is( $hash->{Start},  $start + $count, "$disp page_param pagenum" );
     }
     is( $hash->{Count}, $count,   "$disp page_param pagesize" );
-    is( $hash->{ServiceAreaCD}, $sa_cd,   "$disp service area code" );
 
     my $query = $res->page_query( $pager->first_page );
     like( $query, qr/ Start=1 /x,      "$disp page_query pagenum" );

@@ -2,7 +2,7 @@ package WebService::Recruit::HotPepper::Base;
 use strict;
 use base qw( XML::OverHTTP );
 use vars qw( $VERSION );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use Class::Accessor::Children::Fast;
 
@@ -44,8 +44,7 @@ sub page_param {
     my $self = shift;
     my $page = shift || $self->current_page();
     my $size = shift || $self->entries_per_page();
-    my $hash = shift || $self->param();
-    $hash = { %$hash };
+    my $hash = shift || {};
     $hash->{Start} = ($page-1) * $size + 1;
     $hash->{Count} = $size;
     $hash;
