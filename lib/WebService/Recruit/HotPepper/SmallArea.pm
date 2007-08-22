@@ -2,10 +2,10 @@ package WebService::Recruit::HotPepper::SmallArea;
 use strict;
 use base qw( WebService::Recruit::HotPepper::Base );
 use vars qw( $VERSION );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub url { 'http://api.hotpepper.jp/SmallArea/V110'; }
-sub force_array { [qw( SmallArea Message )]; }
+sub force_array { [qw( SmallArea Error )]; }
 sub elem_class  { 'WebService::Recruit::HotPepper::SmallArea::Element'; }
 sub query_class { 'WebService::Recruit::HotPepper::SmallArea::Query'; }
 

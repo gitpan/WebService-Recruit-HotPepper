@@ -2,10 +2,10 @@ package WebService::Recruit::HotPepper::Budget;
 use strict;
 use base qw( WebService::Recruit::HotPepper::Base );
 use vars qw( $VERSION );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub url { 'http://api.hotpepper.jp/Budget/V110'; }
-sub force_array { [qw( Budget Message )]; }
+sub force_array { [qw( Budget Error )]; }
 sub elem_class  { 'WebService::Recruit::HotPepper::Budget::Element'; }
 sub query_class { 'WebService::Recruit::HotPepper::Budget::Query'; }
 

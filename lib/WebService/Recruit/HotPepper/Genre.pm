@@ -2,10 +2,10 @@ package WebService::Recruit::HotPepper::Genre;
 use strict;
 use base qw( WebService::Recruit::HotPepper::Base );
 use vars qw( $VERSION );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub url { 'http://api.hotpepper.jp/Genre/V110'; }
-sub force_array { [qw( Genre Message )]; }
+sub force_array { [qw( Genre Error )]; }
 sub elem_class  { 'WebService::Recruit::HotPepper::Genre::Element'; }
 sub query_class { 'WebService::Recruit::HotPepper::Genre::Query'; }
 

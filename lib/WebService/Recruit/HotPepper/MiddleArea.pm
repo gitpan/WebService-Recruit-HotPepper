@@ -2,10 +2,10 @@ package WebService::Recruit::HotPepper::MiddleArea;
 use strict;
 use base qw( WebService::Recruit::HotPepper::Base );
 use vars qw( $VERSION );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub url { 'http://api.hotpepper.jp/MiddleArea/V110'; }
-sub force_array { [qw( MiddleArea Message )]; }
+sub force_array { [qw( MiddleArea Error )]; }
 sub elem_class  { 'WebService::Recruit::HotPepper::MiddleArea::Element'; }
 sub query_class { 'WebService::Recruit::HotPepper::MiddleArea::Query'; }
 

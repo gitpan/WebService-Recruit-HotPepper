@@ -2,10 +2,10 @@ package WebService::Recruit::HotPepper::ShopSearch;
 use strict;
 use base qw( WebService::Recruit::HotPepper::Base );
 use vars qw( $VERSION );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub url { 'http://api.hotpepper.jp/ShopSearch/V110'; }
-sub force_array { [qw( Shop Message )]; }
+sub force_array { [qw( Shop Error )]; }
 sub elem_class  { 'WebService::Recruit::HotPepper::ShopSearch::Element'; }
 sub query_class { 'WebService::Recruit::HotPepper::ShopSearch::Query'; }
 

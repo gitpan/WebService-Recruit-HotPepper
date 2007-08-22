@@ -2,10 +2,10 @@ package WebService::Recruit::HotPepper::Food;
 use strict;
 use base qw( WebService::Recruit::HotPepper::Base );
 use vars qw( $VERSION );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub url { 'http://api.hotpepper.jp/Food/V110'; }
-sub force_array { [qw( Food Message )]; }
+sub force_array { [qw( Food Error )]; }
 sub elem_class  { 'WebService::Recruit::HotPepper::Food::Element'; }
 sub query_class { 'WebService::Recruit::HotPepper::Food::Query'; }
 

@@ -2,10 +2,10 @@ package WebService::Recruit::HotPepper::LargeServiceArea;
 use strict;
 use base qw( WebService::Recruit::HotPepper::Base );
 use vars qw( $VERSION );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub url { 'http://api.hotpepper.jp/LargeServiceArea/V110'; }
-sub force_array { [qw( LargeServiceArea Message )]; }
+sub force_array { [qw( LargeServiceArea Error )]; }
 sub elem_class  { 'WebService::Recruit::HotPepper::LargeServiceArea::Element'; }
 sub query_class { 'WebService::Recruit::HotPepper::LargeServiceArea::Query'; }
 
